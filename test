@@ -1,0 +1,23 @@
+<?php
+    session_start();
+    if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+       header("location: login.php");
+       exit;
+    } else {
+        $sql3="SELECT * FROM reviews WHERE title='$mtitle';";
+    $avgRate="N/A";
+    $count=0;
+    $result3=mysqli_query($link, $sql3);
+    $queryResult3=mysqli_num_rows($result3);
+    if($queryResult3>0) {
+      $avgRate=0;
+      while($rows=$result->fetch_assoc()) {
+        $cVal=$rows['userrating'];
+        echo $cVal;
+        $avgRate=$avgRate+$cVal;
+        $count=$count+1;
+      }
+    }
+    echo $avgRate;
+    }  
+?>
