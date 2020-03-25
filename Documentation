@@ -1,0 +1,6 @@
+1) addmovies.php adds new movie by the admin
+2) reviewlist.php is used for watching all reviews made on a particular movie. Here a logged in user can update his/her comment
+3) userrating.php shows all rating and comments by current user
+4) watchlist shows a list of movies the user wishes to watch
+5) On movie page user can add movie to watchlist, view information from IMDB page via json fetch and view all youtube trailers and 
+speacial video related to that movie on a list which is also done by json fetch
